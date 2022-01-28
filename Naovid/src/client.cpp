@@ -470,7 +470,7 @@ public:
                 to.blink_stop();
                 to.blink_stop();
                 to.blink_stop();
-                state_var = 'w';
+                state_var = 't';
                 break;
             }
 

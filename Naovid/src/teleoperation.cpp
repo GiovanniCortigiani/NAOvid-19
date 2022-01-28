@@ -275,7 +275,8 @@ public:
             Naovid::MoveHead head_srv;
 
             head_srv.request.angle_yaw = m_head_yaw_value;
-            head_srv.request.angle_pitch = m_head_pitch_value;
+            head_srv.request.angle_pitch = m_head_pitch_value;         
+            head_srv.request.time = 0.1;
 
             if (bool_move_head) {
                 if (head_client.call(head_srv))
@@ -401,7 +402,7 @@ public:
     void set_window() {
 //        cout << "m_window is open" << endl;
         m_ss << "Planar movement with left joystick ; rotation z-axis with right joystick ; head-movement with up/down and right/left \n" <<
-                "Stand up with A ; Stop teleoperation with B ; Wave to say Goodbye with Y ; Stop person when she or he is not following you with X \n" <<
+                "Stand up with A ; Stop teleoperation with B ; Wave to say Goodbye with X ; Stop person when she or he is not following you with Y \n" <<
                 "Press RB to set eyes blinking to green, LB for red and List button for turniing the eyes off \n" <<
                 "Enjoy operating the robot";
 

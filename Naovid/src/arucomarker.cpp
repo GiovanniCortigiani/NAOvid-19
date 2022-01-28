@@ -315,7 +315,7 @@ public:
             //input x and y in meteres and theta in radians
             geometry_msgs::Pose2D msg_walk;
             msg_walk.x = marker_torso[0] - distance_x;
-            msg_walk.y = marker_torso[1] - distance_y;
+            msg_walk.y = marker_torso[1] + distance_y;
             msg_walk.theta = 0;
             walk_pub.publish(msg_walk);
             cout << "walking" << endl;

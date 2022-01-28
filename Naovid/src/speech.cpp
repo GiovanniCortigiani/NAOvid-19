@@ -76,6 +76,12 @@ public:
     // Publisher to nao walking
     ros::Publisher walk_pub;
 
+    // Client for stoping walk
+    ros::ServiceClient walk_stop_srv;
+
+    // Client for initiate pose for walking
+    ros::ServiceClient needs_start_walk_pose_srv;
+
     //vocabulary member variables
     vector<string> m_recognized_words;
     vector<string> vocabulary;
@@ -100,6 +106,10 @@ public:
         recog_stop_srv=nh_.serviceClient<std_srvs::Empty>("/stop_recognition");
 
         walk_pub=nh_.advertise<geometry_msgs::Pose2D>("/cmd_pose", 1);
+
+        walk_stop_srv=nh_.serviceClient<std_srvs::Empty>("/stop_walk_srv");
+
+        needs_start_walk_pose_srv=nh_.serviceClient<std_srvs::Empty>("/needs_start_walk_pose_srv");
 
         tactile_front = false;
         tactile_middle = false;
@@ -151,20 +161,21 @@ public:
         }
 
         //Head Movement to return to the initial position at the end of the speech
-        ros::ServiceClient head_client = nh_.serviceClient<Naovid::MoveHead>("move_head_service");
-        Naovid::MoveHead head_srv;
-        head_srv.request.angle_yaw = 0;
-        head_srv.request.angle_pitch = -11;
-        head_srv.request.time = 0.2;
+//        ros::ServiceClient head_client = nh_.serviceClient<Naovid::MoveHead>("move_head_service");
+//        Naovid::MoveHead head_srv;
+//        head_srv.request.angle_yaw = 0;
+//        head_srv.request.angle_pitch = -11;
+//        head_srv.request.time = 0.2;
 
-        if (head_client.call(head_srv))
-        {
-            ROS_INFO("head_movement working");
-        }
-        else
-        {
-            ROS_ERROR("Failed to call service move_head_service");
-        }
+//        if (head_client.call(head_srv))
+//        {
+//            ROS_INFO("head_movement working");
+//        }
+//        else
+//        {
+//            ROS_ERROR("Failed to call service move_head_service");
+//        }
+        moveheadw();
     }
 
     void moveheadw(){
@@ -172,7 +183,7 @@ public:
         ros::ServiceClient head_client = nh_.serviceClient<Naovid::MoveHead>("move_head_service");
         Naovid::MoveHead head_srv;
         head_srv.request.angle_yaw = 0;
-        head_srv.request.angle_pitch = -37;
+        head_srv.request.angle_pitch = -11;
         head_srv.request.time = 0.2;
 
         if (head_client.call(head_srv))
@@ -282,14 +293,14 @@ public:
 //        speech_pub.publish(msg_speech);
 
 
-//        if (client.call(srv1))
-//        {
-//            cout << "Stop worked: " << srv1.response << endl;
-//        }
-//        else
-//        {
-//            ROS_ERROR("Failed to call service srv1");
-//        }
+        if (client.call(srv1))
+        {
+            cout << "Stop worked: " << srv1.response << endl;
+        }
+        else
+        {
+            ROS_ERROR("Failed to call service srv1");
+        }
     }
 
     // This function provides the gestures and speech to allow a visitor to come inside the building
@@ -313,6 +324,9 @@ public:
         std::vector<double> t;
         t.push_back(2.0);
         srv2.request.time = t;
+
+        std_srvs::Empty srv;
+        needs_start_walk_pose_srv.call(srv);
 
         geometry_msgs::Pose2D msg_walk;
         msg_walk.x = 0;
@@ -346,7 +360,18 @@ public:
         msg_walk2.theta = 0.087;
         walk_pub.publish(msg_walk2);
 
+        //FallbackPosition();
+
+        sleep(3);
         FallbackPosition();
+
+
+
+        std_srvs::Empty srvw;
+        walk_stop_srv.call(srvw);
+
+        moveheadw();
+
 
     }
 
@@ -574,7 +599,7 @@ public:
         vocabulary.push_back("number");
         vocabulary.push_back("person");
         vocabulary.push_back("assistant");
-        vocabulary.push_back("teleoperator");
+        //vocabulary.push_back("teleoperator");
         //vocabulary.push_back("real human");
 
         naoqi_bridge_msgs::SetSpeechVocabularyActionGoal msg_voc;

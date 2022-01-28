@@ -454,7 +454,8 @@ public:
     void save_shirt_colour(){
         // if shirt colour was not seen before, add the shirt colour to saved shirts
         if (!shirt_already_seen){
-            Vec3b shirtcolours = saved_frame.at<Vec3b>(0,0);
+            Point center(focus_shirt.x + focus_shirt.width/2, focus_shirt.y + focus_shirt.height );
+            Vec3b shirtcolours = frame.at<Vec3b>(center.y,center.x);
             shirtcolours[0] = (unsigned char)focus_shirtcolour[0];
             shirtcolours[1] = (unsigned char)focus_shirtcolour[1];
             shirtcolours[2] = (unsigned char)focus_shirtcolour[2];
