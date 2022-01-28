@@ -4,9 +4,9 @@ Giovanni Cortigiani, Bernhard Glas, Ziting Huang
 
 ## To run the project, please run these commands in separate terminals:
 
-´´´
+```
 $ roslaunch nao_bringup nao_full_py.launch
-´´´
+```
 ´´´
 $ roslaunch Naovid nao_apps.launch
 ´´´
