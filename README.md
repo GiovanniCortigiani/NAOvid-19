@@ -24,11 +24,15 @@ Please be aware that the robot will stand up at the beginning of the project.
 ```
 $ sudo apt-get install libsfml-dev
 ```
+This will install the Simple and Fast Multimedia Library (SFML)-library which is needed for the teleoperation mode in order to process the inputs of the gamepad and create a window to explain the functionalities to a new teleoperator.
 ```
 $ sudo apt-get install libboost-all-dev
 ```
+This library is used to read files from the system.
 ```
 $ sudo apt-get install libzbar0
+```
+This library will encode the shown QR-codes intro a string in line with OpenCV.
 ```
 and a docker basic installation.
 
