@@ -34,7 +34,10 @@ $ sudo apt-get install libzbar0
 ```
 This library will encode the shown QR-codes intro a string in line with OpenCV.
 ```
-$ Docker is aditionally needed for the Covid Certificate interface. Please find a tutorial to install it [here.](https://docs.docker.com/compose/install/)
+$ sudo docker --version
+```
+Docker-compose is aditionally needed for the Covid Certificate interface. Please find a tutorial to install it [here.](https://docs.docker.com/compose/install/)
+```
 
 We also added the cmake minimum required version $cmake_minimum_required(VERSION 2.8.3) to the CMakeList. 
 
