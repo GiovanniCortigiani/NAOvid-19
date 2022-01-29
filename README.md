@@ -33,7 +33,7 @@ $ roslaunch Naovid nao.launch
 The last one is the main launch file and will make the execution start.
 Please be aware that the robot will stand up at the beginning of the project.
 
-## Structure of the package:
+### Structure of the package:
 
 The main code is in the client.cpp. This file contains the main loop where a state machine determines the behaviour of the robot in the different situations. A service-client structure is usually exploited for robot movements, gestures and speech.
 
@@ -72,3 +72,7 @@ $cmake_minimum_required(VERSION 2.8.3)
 The CMake requirement was also added to the CMakeList, in order to ensure a smooth compilation.
 
 Furthermore, all the libraries, tools and frameworks from the tutorial sessions of the course "Humanoid Robotic Systems" (e.g., OpenCV, Rospy, ROS Kinetic, TF) were utilized within this project and should already be pre-installed on the student computers which are run by Ubuntu 14.04.
+
+### Hardware
+
+For the teleoperation part, a common Xbox joystick was utilised. The communication between the visitor and the teleoperator can be done with any device, e.g. using a Zoom videocall on a computer located in the shop entrance where NAOvid-19 lies. In this way, the teleoperator can both interact with the visitor speaking and listening, while at the same time have an external camera pointing to the robot.
