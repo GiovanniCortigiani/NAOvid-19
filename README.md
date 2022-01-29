@@ -3,7 +3,7 @@ This repository contains the package needed to run the project on the NAO Robot.
 
 Collaborators: Giovanni Cortigiani, Bernhard Glas, Ziting Huang
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![Shop Entrance]()
 
 
 ## Execution
