@@ -33,7 +33,7 @@ $ roslaunch Naovid nao.launch
 The last one is the main launch file and will make the execution start.
 Please be aware that the robot will stand up at the beginning of the project.
 
-### Structure of the package:
+### Structure of the package
 
 The main code is in the client.cpp. This file contains the main loop where a state machine determines the behaviour of the robot in the different situations. A service-client structure is usually exploited for robot movements, gestures and speech.
 
