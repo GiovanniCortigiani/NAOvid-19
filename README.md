@@ -40,5 +40,7 @@ Docker-compose is aditionally needed for the Covid Certificate interface. Please
 ```
 $cmake_minimum_required(VERSION 2.8.3)  
 ```
-The CMake requirement was also added to the CMakeList, in order to ensure a smooth compilation. \n
+The CMake requirement was also added to the CMakeList, in order to ensure a smooth compilation.
+
+
 Furthermore, all the libraries, tools and frameworks from the tutorial sessions of the course "Humanoid Robotic Systems" (e.g., OpenCV, Rospy, ROS Kinetic, TF) were utilized within this project and should already be pre-installed on the student computers which are run by Ubuntu 14.04.
