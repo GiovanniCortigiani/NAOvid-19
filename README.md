@@ -75,4 +75,4 @@ Furthermore, all the libraries, tools and frameworks from the tutorial sessions 
 
 ### Hardware
 
-For the teleoperation part, a common Xbox joystick was utilised. The communication between the visitor and the teleoperator can be done with any device, e.g. using a Zoom videocall on a computer located in the shop entrance where NAOvid-19 lies. In this way, the teleoperator can both interact with the visitor speaking and listening, while at the same time have an external camera pointing to the robot.
+The code is launched by the teleoperator in a separate room. If in the computer is not integrated a speaker or microphone, and additional device can be connected do it to be able to listen and speak. A common Xbox joystick was utilised to control the robot in the teloperation. The communication between the visitor and the teleoperator can be done with any device, e.g. using a Zoom videocall on a computer located in the shop entrance where NAOvid-19 lies. In this way, the teleoperator can both interact with the visitor speaking and listening, while at the same time have an external camera pointing to the robot.
