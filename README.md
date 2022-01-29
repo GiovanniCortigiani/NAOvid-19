@@ -3,7 +3,7 @@ This repository contains the package needed to run the project on the NAO Robot.
 
 Collaborators: Giovanni Cortigiani, Bernhard Glas, Ziting Huang
 
-![Shop Entrance]()
+![Shop Entrance](/Figures/NAO_ShopEntrance.jpg)
 
 
 ## Execution
