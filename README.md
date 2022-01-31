@@ -1,4 +1,4 @@
-# NAOVID-19
+# NAOvid-19
 This repository contains the package needed to run the project on the NAO Robot. The robot is in charge of being a shopassistant: he welcomes venue visitors by checking their QR Code and answering questions, and says goodbye to visitors exiting from the Shop. Further, through shirt and face detection he identifies the visitors, thus knowing whether a visitor has already entered in the shop, not asking again for the QR Code. Taking into account the number of visitors inside the shop, he denies the entrance if the shop is full. If a customer wishes also to talk with a real human, a teleoperator handles the control of the NAO Robot, to talk with the customer, drive him somewhere or do whatever the visitor asks. One the teleoperator is done, the robot is able to return to his position by checking his position with respect to an ArUco Marker.
 
 Collaborators: Giovanni Cortigiani, Bernhard Glas, Ziting Huang
@@ -34,6 +34,9 @@ $ roslaunch Naovid nao.launch
 
 The last one is the main launch file and will make the execution start.
 Please be aware that the robot will stand up at the beginning of the project.
+
+![Teleassistant Screen Layout](/Figures/NAO_Teleassisant_Screen_Overview.png)
+After executing the four commands in four different terminals, the execution should like this overview of the Teleassistant Screen Layout (with live-streams from both NAO cameras at the left side, the third-person camera-view of the utilized laptop at the upper right side, the four terminals executing the required commands in the background (the project’s executable was run on the teleoperator’s computer in our setup) and the window of the teleoperator instructions at the bottom in order to ensure intuitive control which is doable by a randomly selected person with minimal training).
 
 ### Structure of the package
 
