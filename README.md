@@ -36,7 +36,7 @@ The last one is the main launch file and will make the execution start.
 Please be aware that the robot will stand up at the beginning of the project.
 
 ![Teleassistant Screen Layout](/Figures/NAO_Teleassisant_Screen_Overview.png)
-After executing the four commands in four different terminals, the execution should like this overview of the Teleassistant Screen Layout (with live-streams from both NAO cameras at the left side, the third-person camera-view of the utilized laptop at the upper right side, the four terminals executing the required commands in the background (the project’s executable was run on the teleoperator’s computer in our setup) and the window of the teleoperator instructions at the bottom in order to ensure intuitive control which is doable by a randomly selected person with minimal training).
+After executing the four commands in four different terminals, the execution should like the above-shown overview of the Teleassistant Screen Layout (with live-streams from both NAO cameras at the left side, the third-person camera-view of the utilized laptop at the upper right side, the four terminals executing the required commands in the background (the project’s executable was run on the teleoperator’s computer in our setup) and the window of the teleoperator instructions at the bottom in order to ensure intuitive control which is doable by a randomly selected person with minimal training).
 
 ### Structure of the package
 
