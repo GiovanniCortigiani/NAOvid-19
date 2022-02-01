@@ -23,7 +23,7 @@ $ roslaunch Naovid nao_apps.launch
 This launches the speech, tactile and led apps of the robot;
 
 ```
-$ docker run -p 8000:8000 -e CERT_COUNTRY=DE ghcr.io/merlinschumacher/open-covid-certificate-validator:main
+$ sudo docker run -p 8000:8000 -e CERT_COUNTRY=DE ghcr.io/merlinschumacher/open-covid-certificate-validator:main
 ```
 
 Needed for the Vaccination Certificate Check;
@@ -32,7 +32,7 @@ Needed for the Vaccination Certificate Check;
 $ roslaunch Naovid nao.launch
 ```
 
-The last one is the main launch file and will make the execution start.
+The last one is the main launch file and will make the execution start. This command has to be executed in the direction of your catkin workspace.
 Please be aware that the robot will stand up at the beginning of the project.
 
 ![Teleassistant Screen Layout](/Figures/NAO_Teleassisant_Screen_Overview.png)
@@ -44,7 +44,9 @@ The main code is in the client.cpp. This file contains the main loop where a sta
 
 ### Dependencies and libraries
 
-To run the project properly, the following dependencies have to be installed:
+This project was compiled with the CMake-based build system catkin. One has to create a standard catkin workspace in preparation of the setup. The repository has to be cloned into the source folder (e.g., main/ros/catkin_ws/src) of the mentioned catkin workspace. Furthermore, the [ROS Parameter file](https://github.com/GiovanniCortigiani/NAOvid-19/blob/main/Naovid/Naovid_param.yaml) has to be copied in the root folder of the catkin workspace (next to the folders of build, devel, logs, src; e.g., main/ros/catkin_ws), in order to launch everything properly. Afterwards, one can run $ catkin build within this catkin workspace to compile the project, once the following dependencies are installed.
+
+In order to compile and run the project properly, the following dependencies have to be installed:
 
 ```
 $ sudo apt-get install libsfml-dev
@@ -76,7 +78,7 @@ $cmake_minimum_required(VERSION 2.8.3)
 
 The CMake requirement was also added to the CMakeList, in order to ensure a smooth compilation.
 
-Furthermore, all the libraries, tools and frameworks from the tutorial sessions of the course "Humanoid Robotic Systems" (e.g., OpenCV, Rospy, ROS Kinetic, TF) were utilized within this project and should already be pre-installed on the student computers which are run by Ubuntu 14.04.
+Furthermore, all the libraries, tools and frameworks from the tutorial sessions of the course "Humanoid Robotic Systems" (e.g., NAOqi, OpenCV, Rospy, ROS Kinetic, TF) were utilized within this project and should already be pre-installed on the student computers which are run by Ubuntu 14.04.
 
 ### Hardware
 
