@@ -44,7 +44,7 @@ The main code is in the client.cpp. This file contains the main loop where a sta
 
 ### Dependencies and libraries
 
-This project was compiled with the CMake-based build system catkin. One has to create a standard catkin workspace in preparation of the setup. The repository has to be cloned into the source folder (e.g., main/ros/catkin_ws/src) of the mentioned catkin workspace. Furthermore, the [ROS Parameter file](https://github.com/GiovanniCortigiani/NAOvid-19/blob/main/Naovid/Naovid_param.yaml) has to be copied in the root folder of the catkin workspace (next to the folders of build, devel, logs, src; e.g., main/ros/catkin_ws), in order to launch everything properly. Afterwards, one can run $ catkin build within this catkin workspace to compile the project, once the following dependencies are installed.
+This project was compiled with the CMake-based build system catkin. One has to create a standard catkin workspace in preparation of the setup. The repository has to be cloned into the source folder (e.g., main/ros/catkin_ws/src) of the mentioned catkin workspace. Furthermore, the [ROS Parameter file](https://github.com/GiovanniCortigiani/NAOvid-19/blob/main/Naovid/Naovid_param.yaml) has to be copied in the root folder of the catkin workspace (next to the folders of build, devel, logs, src; e.g., main/ros/catkin_ws), in order to launch everything properly. Afterwards, one can execute $ catkin build within this catkin workspace to compile the project, once the following dependencies are installed.
 
 In order to compile and run the project properly, the following dependencies have to be installed:
 
