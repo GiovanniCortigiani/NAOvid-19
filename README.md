@@ -73,7 +73,7 @@ $ sudo docker --version
 Docker-compose is additionally needed for the Covid Certificate interface. Please find a tutorial to install it [here.](https://docs.docker.com/compose/install/)
 
 ```
-$cmake_minimum_required(VERSION 2.8.3)  
+$ cmake_minimum_required(VERSION 2.8.3)  
 ```
 
 The CMake requirement was also added to the CMakeList, in order to ensure a smooth compilation.
