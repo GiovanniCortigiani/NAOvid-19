@@ -40,11 +40,13 @@ After executing the four commands in four different terminals, the execution sho
 
 ### Structure of the package
 
-The main code is in the client.cpp. This file contains the main loop where a state machine determines the behaviour of the robot in the different situations. A service-client structure is usually exploited for robot movements, gestures and speech.
+The main code is in the client.cpp. This file contains the main loop where a state machine determines the behaviour of the robot in the different situations. A service-client structure is usually exploited for robot movements, gestures and speech. A better overview is given in the following system architecture diagram. 
+
+![NAOvid-19 System Architecture](/Figures/SystemArchitecture.jpeg)
 
 ### Dependencies and libraries
 
-This project was compiled with the CMake-based build system catkin. One has to create a standard catkin workspace in preparation of the setup. The repository has to be cloned into the source folder (e.g., main/ros/catkin_ws/src) of the mentioned catkin workspace. Furthermore, the [ROS Parameter file](https://github.com/GiovanniCortigiani/NAOvid-19/blob/main/Naovid/Naovid_param.yaml) has to be copied in the root folder of the catkin workspace (next to the folders of build, devel, logs, src; e.g., main/ros/catkin_ws), in order to launch everything properly. Afterwards, one can execute $ catkin build within this catkin workspace to compile the project, once the following dependencies are installed.
+This project was compiled with the CMake-based build system catkin. One has to create a standard catkin workspace in preparation of the setup. The repository has to be cloned into the source folder (e.g., main/ros/catkin_ws/src) of the mentioned catkin workspace. Furthermore, the [ROS Parameter file](https://github.com/GiovanniCortigiani/NAOvid-19/blob/main/Naovid/Naovid_param.yaml) has to be copied in the root folder of the catkin workspace (next to the folders of build, devel, logs, src; e.g., main/ros/catkin_ws), in order to launch everything properly. Within in this ROS parameter file, one can set several thresholds and variables which are defined in the respective file. The report of this project may help for a better understanding of the functionalities and can be requested from the project's collaborators. Afterwards, one can execute $ catkin build within this catkin workspace to compile the project, once the following dependencies are installed.
 
 In order to compile and run the project properly, the following dependencies have to be installed:
 
