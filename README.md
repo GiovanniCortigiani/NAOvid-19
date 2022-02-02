@@ -42,8 +42,6 @@ After executing the four commands in four different terminals, the execution sho
 
 The main code is in the client.cpp. This file contains the main loop where a state machine determines the behaviour of the robot in the different situations. A service-client structure is usually exploited for robot movements, gestures and speech. A better overview is given in the following system architecture and state machine diagram. 
 
-![](/Figures/SystemArchitecture.jpeg) ![](/Figures/StateMachine.jpeg)
-
 <p align="center">
   <img alt="NAOvid-19 System Architecture" src="https://github.com/GiovanniCortigiani/NAOvid-19/blob/main/Figures/SystemArchitecture.jpeg" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
